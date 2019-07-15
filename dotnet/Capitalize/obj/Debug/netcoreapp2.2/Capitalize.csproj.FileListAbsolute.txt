@@ -1,0 +1,11 @@
+C:\Users\Wei Jie\Desktop\Projects\AldehydePrecondition\dotnet\Capitalize\bin\Debug\netcoreapp2.2\Capitalize.deps.json
+C:\Users\Wei Jie\Desktop\Projects\AldehydePrecondition\dotnet\Capitalize\bin\Debug\netcoreapp2.2\Capitalize.runtimeconfig.json
+C:\Users\Wei Jie\Desktop\Projects\AldehydePrecondition\dotnet\Capitalize\bin\Debug\netcoreapp2.2\Capitalize.runtimeconfig.dev.json
+C:\Users\Wei Jie\Desktop\Projects\AldehydePrecondition\dotnet\Capitalize\bin\Debug\netcoreapp2.2\Capitalize.dll
+C:\Users\Wei Jie\Desktop\Projects\AldehydePrecondition\dotnet\Capitalize\bin\Debug\netcoreapp2.2\Capitalize.pdb
+C:\Users\Wei Jie\Desktop\Projects\AldehydePrecondition\dotnet\Capitalize\obj\Debug\netcoreapp2.2\Capitalize.csprojAssemblyReference.cache
+C:\Users\Wei Jie\Desktop\Projects\AldehydePrecondition\dotnet\Capitalize\obj\Debug\netcoreapp2.2\Capitalize.csproj.CoreCompileInputs.cache
+C:\Users\Wei Jie\Desktop\Projects\AldehydePrecondition\dotnet\Capitalize\obj\Debug\netcoreapp2.2\Capitalize.AssemblyInfoInputs.cache
+C:\Users\Wei Jie\Desktop\Projects\AldehydePrecondition\dotnet\Capitalize\obj\Debug\netcoreapp2.2\Capitalize.AssemblyInfo.cs
+C:\Users\Wei Jie\Desktop\Projects\AldehydePrecondition\dotnet\Capitalize\obj\Debug\netcoreapp2.2\Capitalize.dll
+C:\Users\Wei Jie\Desktop\Projects\AldehydePrecondition\dotnet\Capitalize\obj\Debug\netcoreapp2.2\Capitalize.pdb
