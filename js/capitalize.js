@@ -18,9 +18,7 @@ async function writeToFileInCaps(text) {
 }
 
 function capitalizeText(text) {
-    return text.split(" ")
-        .map(capitalizeWord)
-        .join(" ");
+    return text.replace(/\S+/g, capitalizeWord);
 }
 
 function capitalizeWord(word) {
