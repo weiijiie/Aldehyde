@@ -11,8 +11,18 @@ async function writeToFileInCaps(text) {
     const [name, ext] = fileName.split('.');
     const outName = process.argv[3] || `${name}-capitalized.${ext}`; 
 
-    fs.writeFile(outName, text.toUpperCase(), 'utf8', err => {
+    fs.writeFile(outName, capitalizeText(text), 'utf8', err => {
         if (err) throw err;
         console.log('Capitalized version written!');
     });
+}
+
+function capitalizeText(text) {
+    return text.split(" ")
+        .map(capitalizeWord)
+        .join(" ");
+}
+
+function capitalizeWord(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
 }
