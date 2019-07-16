@@ -16,12 +16,20 @@ namespace Capitalize
                 Console.WriteLine("Please supply file to be capitalized as argument.");
                 return;
             }
+
             var filePath = $"{Directory.GetCurrentDirectory()}\\{args[0]}";
             var lines = File.ReadAllLines(filePath);
             var outputName = args.Length > 1 ? args[1] : GetOutputName(args[0]);
 
-            await WriteLinesCapitalizedAsync(lines, outputName);
-            Console.WriteLine("Capitalized file written");
+            try
+            {
+                await WriteLinesCapitalizedAsync(lines, outputName);
+                Console.WriteLine("Capitalized file written");
+            }
+            catch (OperationCanceledException)
+            {
+                Console.WriteLine("Error occured");
+            }
         }
 
         private static async Task WriteLinesCapitalizedAsync(IEnumerable<string> lines, string outputName)
@@ -31,7 +39,18 @@ namespace Capitalize
                 .Replace(line, match => CapitalizeWord(match.ToString()))
                 .ToString());
 
+
             await File.WriteAllLinesAsync(outputPath, capitalizedLines);
+        }
+
+        private static string CapitalizeWord(string word)
+        {
+            if (word == "")
+            {
+                return "";
+            }
+
+            return word.First().ToString().ToUpper() + word.Substring(1);
         }
 
         private static string GetOutputName(string oldName)
@@ -39,14 +58,5 @@ namespace Capitalize
             var ext = oldName.Split(".").Last();
             return $"{string.Join(".", oldName.Split(".").SkipLast(1))}-capitalized.{ext}";
         }
-        private static string CapitalizeWord(string word)
-        {
-            if (word == "")
-            {
-                return "";
-            }
-            return word.First().ToString().ToUpper() + word.Substring(1);
-        }
-        
     }
 }
