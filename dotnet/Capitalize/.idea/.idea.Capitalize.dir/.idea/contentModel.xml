@@ -13,6 +13,7 @@
           </e>
         </e>
       </e>
+      <e p="out.txt" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.cs" t="Include" />
       <e p="test.txt" t="Include" />
