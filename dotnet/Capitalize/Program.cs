@@ -17,8 +17,7 @@ namespace Capitalize
                 return;
             }
 
-            var filePath = $"{Directory.GetCurrentDirectory()}\\{args[0]}";
-            var lines = File.ReadAllLines(filePath);
+            var lines = File.ReadAllLines(args[0]);
             var outputName = args.Length > 1 ? args[1] : GetOutputName(args[0]);
 
             try
@@ -34,13 +33,13 @@ namespace Capitalize
 
         private static async Task WriteLinesCapitalizedAsync(IEnumerable<string> lines, string outputName)
         {
-            var outputPath = $"{Directory.GetCurrentDirectory()}\\{outputName}";
-            var capitalizedLines = lines.Select(line => new Regex(@"\S+")
-                .Replace(line, match => CapitalizeWord(match.ToString()))
-                .ToString());
+            var capitalizedLines = lines.Select(line =>
+                new Regex(@"\S+")
+                    .Replace(line, match => CapitalizeWord(match.ToString()))
+                    .ToString());
 
 
-            await File.WriteAllLinesAsync(outputPath, capitalizedLines);
+            await File.WriteAllLinesAsync(outputName, capitalizedLines);
         }
 
         private static string CapitalizeWord(string word)
