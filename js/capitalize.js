@@ -6,6 +6,7 @@ fs.readFile(fileName, 'utf8', (err, data) => {
     writeToFileInCaps(data);
 });
 
+exports.capitalize = capitalizeText;
 
 async function writeToFileInCaps(text) {
     const [ext] = fileName.split('.').slice(-1);
